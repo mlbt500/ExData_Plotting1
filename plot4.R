@@ -1,3 +1,4 @@
+png(filename = "plot4.png", width = 480, height = 480)
 par(mfrow = c(2, 2), mar = c(4, 4, 2, 1))
 values <- c("Global_active_power", "Global_reactive_power", "Voltage")
 for(i in values){
@@ -9,3 +10,4 @@ with(data2,{
   lines(Sub_metering_3 ~ DateTime, col = "red")
 })
 legend("topright", legend = c("meter 1", "meter 2", "meter 3"), fill = c("black", "blue", "red"))
+dev.off()
